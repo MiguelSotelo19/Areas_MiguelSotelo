@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas básico</title>
+</head>
+<body>
+    
+    <script>
+        let opc = 0;
+        do{
+            opc = parseInt(prompt("Ingresa una de las siguientes opciones: \n1. Área del cuadrado \n2. Área del rectángulo \n3. Área del triángulo \n4. Área del circulo \n5. Salir"));
+
+            switch(opc) {
+                case 1:
+                    let lado = parseFloat(prompt("¿Cuánto mide el lado del cuadrado?"));
+                    alert("El área es: "+(lado*lado));
+                    break;
+                case 2:
+                    let base = parseFloat(prompt("¿Cuánto mide la base?"));
+                    let altura = parseFloat(prompt("¿Cuánto mide la altura?"));
+                    alert("El área es: "+(base*altura));
+                    break;
+                case 3:
+                    let base2 = parseFloat(prompt("¿Cuánto mide la base?"));
+                    let altura2 = parseFloat(prompt("¿Cuánto mide la altura?"));
+                    alert("El área es: "+((base2*altura2)/2));
+                    break;
+                case 4:
+                    let radio = parseFloat(prompt("¿Cuánto mide el radio?"));
+                     alert("El área es: "+(Math.PI*(radio*radio)));
+                    break;
+                case 5:
+                    alert("Saliendo...");
+                    break;
+                default:
+                    alert("Ingresa una opción válida");
+                    break;
+            }
+
+        }while(opc != 5);
+    </script>
+</body>
+</html>
